@@ -7,17 +7,16 @@ import ParticlesWrapper from "@/components/general/particlesWrapper";
 const BLUR_FADE_DELAY = 0.1;
 
 export default function AboutPage() {
-
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 px-4 sm:px-8 py-20">
-        <ParticlesWrapper />
+      <ParticlesWrapper />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="flex justify-between gap-4">
             <div className="flex flex-col flex-1 space-y-2">
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Hi, I'm {DATA.name.split(" ")[0]} 👋
+                  {`Hi, I'm ${DATA.name.split(" ")[0]}`} 👋
                 </h1>
               </BlurFade>
 

@@ -2,6 +2,7 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { PulsatingButton } from "@/components/magicui/pulsating-button";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { SparklesText } from "@/components/magicui/sparkles-text";
 function HeroPage() {
@@ -32,17 +33,28 @@ function HeroPage() {
       </div>
 
       <div className="relative rounded-xl mx-auto justify-center flex flex-col items-center lg:max-w-[1000px] overflow-hidden md:overflow-auto lg:overflow-auto">
-        <img
-          src="/darkoutput.jpg"
-          alt="Hero Image"
-          className="hidden lg:max-w-[1000px]  rounded-[inherit] border object-contain shadow-lg dark:block overflow-hidden md:overflow-auto lg:overflow-auto"
-        />
-        <img
-          src="/lightoutput.jpg"
-          alt="Hero Image"
-          className="block lg:max-w-[1000px]  rounded-[inherit] border object-contain shadow-lg dark:hidden overflow-hidden md:overflow-auto lg:overflow-auto"
-        />
+        <div className="hidden dark:block lg:max-w-[1000px] rounded-[inherit] border object-contain shadow-lg overflow-hidden md:overflow-auto lg:overflow-auto">
+          <Image
+            src="/darkoutput.jpg"
+            alt="Hero Image (dark)"
+            width={1000}
+            height={600}
+            className="rounded-[inherit] object-contain"
+            priority
+          />
+        </div>
 
+        {/* Light mode image */}
+        <div className="block dark:hidden lg:max-w-[1000px] rounded-[inherit] border object-contain shadow-lg overflow-hidden md:overflow-auto lg:overflow-auto">
+          <Image
+            src="/lightoutput.jpg"
+            alt="Hero Image (light)"
+            width={1000}
+            height={600} // adjust height as needed
+            className="rounded-[inherit] object-contain"
+            priority
+          />
+        </div>
         <BorderBeam size={250} />
       </div>
     </section>
