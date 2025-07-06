@@ -18,7 +18,7 @@ export async function Navbar() {
       <nav className="relative z-10 py-5 flex items-center justify-between bg-transparent rounded px-10">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2">
-            <BotSquare size={32} color="#000000" />
+            <BotSquare size={32} color="#2B7FFF" />
             <h1 className="text-3xl font-semibold ">
               Blue<span className="text-blue-500">Quotes</span>
             </h1>
@@ -44,7 +44,8 @@ export async function Navbar() {
                               BlueQuotes
                             </div>
                             <p className="text-sm leading-tight text-muted-foreground">
-                              Quotes from GOAT 🐐 to make your day and life.
+                              Not just quotes. It's your daily reboot. Brought
+                              to you by real legends 🐐.
                             </p>
                           </a>
                         </NavigationMenuLink>
