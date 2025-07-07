@@ -70,6 +70,16 @@ export const quotes = [
     text: "Genius is 1% inspiration and 99% perspiration.",
   },
   {
+    category: "success",
+    author: "A. P. J. Abdul Kalam",
+    text: "Man needs his difficulties because they are necessary to enjoy success.",
+  },
+  {
+    category: "success",
+    author: "Shah Rukh Khan",
+    text: "Success is not a good teacher, failure makes you humble.",
+  },
+  {
     category: "life",
     author: "Confucius",
     text: "Life is really simple, but we insist on making it complicated.",

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { Button, buttonVariants } from "../ui/button";
 import { Github, BotSquare } from "@deemlol/next-icons";
-import { ThemeProvider } from "./theme-provider";
-import { Toggle } from "../ui/toggle";
 import { ModeToggle } from "./modeToggle";
 import {
   NavigationMenu,
@@ -28,7 +26,7 @@ export async function Navbar() {
             <NavigationMenu className="hidden lg:block">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent">
+                  <NavigationMenuTrigger className="bg-transparent px-4 py-3 min-w-[40px] min-h-[40px]">
                     Getting started
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -56,29 +54,34 @@ export async function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link
-              href="/"
-              className="text-sm font-medium hover:text-blue-400 transition-colors"
+            <Button
+              variant="ghost"
+              asChild
+              className="min-w-[40px] min-h-[40px] px-4 py-3"
             >
-              <Button variant="ghost">Home</Button>
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-medium hover:text-blue-400 transition-colors"
+              <Link href="/">Home</Link>
+            </Button>
+            <Button
+              variant="ghost"
+              asChild
+              className="min-w-[40px] min-h-[40px] px-4 py-3"
             >
-              <Button variant="ghost">About</Button>
-            </Link>
+              <Link href="/about">About</Link>
+            </Button>
           </div>
         </div>
         <div className="flex items-center gap-4 rounded-2xl">
           <ModeToggle />
-          <Button variant="default">
-            <Link href="https://github.com/arham2003" target="_blank">
-              <span>
-                <Github size={36} color="#ffffff" />
-              </span>
-            </Link>
-          </Button>
+
+          <Link
+            href="https://github.com/arham2003"
+            target="_blank"
+            className="min-w-[32px] min-h-[32px] inline-flex items-center justify-center rounded-md px-3 py-2 bg-primary text-white hover:bg-primary/90 transition"
+            aria-label="Visit Arham's GitHub profile"
+          >
+            <Github size={22} color="#ffffff" />
+            <span className="sr-only">{`Arham’s GitHub`}</span>
+          </Link>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-400 to-transparent" />
       </nav>

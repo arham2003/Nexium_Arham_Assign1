@@ -6,6 +6,11 @@ import ParticlesWrapper from "@/components/general/particlesWrapper";
 
 const BLUR_FADE_DELAY = 0.1;
 
+export const metadata = {
+  title: "About | Arham Khan",
+  description: "Learn more about Arham and his journey in tech.",
+};
+
 export default function AboutPage() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 px-4 sm:px-8 py-20">
