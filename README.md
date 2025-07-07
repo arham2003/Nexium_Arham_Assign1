@@ -20,7 +20,6 @@ This was designed to explore how to build fast client-server hybrid apps using t
 - [ShadCN UI](https://ui.shadcn.com)
 - [Magic UI (Particles & Animation)](https://magicui.dev)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Zod + React Hook Form](https://react-hook-form.com)
 - [Lucide Icons](https://lucide.dev)
 
 ## Getting Started
@@ -57,6 +56,11 @@ These instructions will help you set up the project locally.
    npm run dev
    ```
 4. Open your browser at http://localhost:3000
+
+## Accessibility
+
+- Accessibility passed with 100% score from Lighthouse.
+- Descriptive labels added for the app for screen readers.
 
 ## 🤝 Contributing
 
